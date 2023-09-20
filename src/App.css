@@ -93,3 +93,10 @@ body{
 .hiddenResult{
   display: none;
 }
+.pleaseInput{
+  margin-left:20px;
+  margin-top: 20px;
+}
+#carimg{
+  height: 1000px;
+}
