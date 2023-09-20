@@ -26,7 +26,7 @@ const Home = () => {
       {images.map((item, index) => (
         <div className={activeIndex === index ? "carousel-item active" : "carousel-item"}>
           <img 
-          className="d-block w-100"
+          className="d-block w-100 img-fluid"
           id="carimg"
           src={item} 
           />
