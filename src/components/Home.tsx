@@ -8,6 +8,18 @@ let images = [candle,butterfly,flowers]
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0)
+  async function autoscroll(){
+    while(true){
+      await new Promise(f => setTimeout(f, 5000))
+      if(activeIndex === 2){
+        setActiveIndex(0)
+      }
+      else{
+        setActiveIndex(activeIndex+1)
+      }
+    }
+  }
+  autoscroll()
 
   return (
     <div className="carousel slide" data-ride="carousel">
