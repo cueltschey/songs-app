@@ -2,20 +2,18 @@ import flowers from "./assets/flowers.jpg"
 import butterfly from "./assets/butterfly.jpg"
 import candle from "./assets/candle.jpg"
 import { useState } from "react"
-import { MouseEventHandler } from "react"
 
 let images = [candle,butterfly,flowers]
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0)
+
   async function autoscroll(){
     while(true){
-      await new Promise(f => setTimeout(f, 5000))
+      await new Promise(f => setTimeout(f, 10000))
+      setActiveIndex(activeIndex+1)
       if(activeIndex === 2){
         setActiveIndex(0)
-      }
-      else{
-        setActiveIndex(activeIndex+1)
       }
     }
   }
