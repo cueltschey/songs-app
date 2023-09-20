@@ -1,34 +1,39 @@
+import flowers from "./assets/flowers.jpg"
+import butterfly from "./assets/butterfly.jpg"
+import candle from "./assets/candle.jpg"
+import { useState } from "react"
+import { MouseEventHandler } from "react"
 
-interface Props{
-  index : number;
-  artists : string[];
-  songs : [string[]][];
+let images = [candle,butterfly,flowers]
+
+const Home = () => {
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  return (
+    <div className="carousel slide" data-ride="carousel">
+      {images.map((item, index) => (
+        <div className={activeIndex === index ? "carousel-item active" : "carousel-item"}>
+          <img 
+          className="d-block w-100"
+          id="carimg"
+          src={item} 
+          />
+          <a 
+          className="carousel-control-prev"
+          id="nextprev" 
+          onClick={() => {index > 0 ? setActiveIndex(index-1) : setActiveIndex(index)}}>
+            ⬅️ prev
+          </a>
+          <a 
+          className="carousel-control-next"
+          id = "nextprev"
+          onClick={() => {index < 2 ? setActiveIndex(index+1) : setActiveIndex(index)}}>
+            next ➡️
+          </a>
+        </div>
+      ))}
+    </div>
+  )
 }
 
-const Main = ({index, artists, songs}:Props) => {
-  if(songs.length < 1){
-    return(
-    <h2 className="pleaseInput">Please Input Songs...</h2>
-    )
-  }
-    return(
-      <ul className="list-group" id="songlist">
-        <h1> {artists[index]}</h1>
-        {songs[index].map((song , index, songsArray) => (
-          <li className="list-group-item" id="songdisplay">
-            <div className="row content-align-center">
-              <div className="col">
-                <h4 id="songtitle">{songsArray[index][1]}</h4>
-              </div>
-              <div className="col">
-                <audio controls id="player" src={songsArray[index][0]}></audio>
-              </div>
-            </div>
-          </li>
-        ))}
-
-      </ul>
-    )
-  }
-
-export default Main
+export default Home
