@@ -1,0 +1,95 @@
+.nav-link{
+  color: burlywood;
+  border-radius: 10px;
+}
+.nav-link:hover{
+  color: #70918a;
+  border-color: #424f4c;
+}
+.nav-tabs{
+  border-color: #424f4c;
+}
+.nav-tabs .nav-link.active{
+  background-color: #70918a;
+  color: #424f4c;
+  border-color: #424f4c;
+}
+body{
+  background-color: #424f4c;
+}
+.list-group{
+  border-color: black;
+}
+.list-group-item{
+  background-color: #424f4c; 
+}
+.list-group-item.active{
+  background-color: #70918a;
+  border-color: #70918a;
+}
+#aside-wrapper{
+  border-width: 10px;
+}
+.img-fluid{
+  height: 150px;
+  object-fit: cover;
+}
+#search{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+#navigation{
+  background-color:#424f4c;
+  padding: 0px;
+  margin-top: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.container{
+  background-color: white;
+  border-radius: 10px;
+  padding: 2px;
+  margin-left: 10px;
+}
+#songlist{
+  margin-top:20px;
+  margin-left: 20px;
+}
+#songdisplay{
+  margin-bottom: 20px;
+  margin-right: 10px;
+  border-color:hsl(168, 7%, 13%);
+  border-radius: 10px;
+  border-width: 1px;
+  padding: 15px;
+  max-width: 500px;
+}
+#addfile{
+  margin-left:10px;
+  margin-top:20px;
+  text-align: center;
+  border-width: 1px;
+  border-color: hsl(168, 7%, 13%);
+  background-color: rgb(253, 252, 252);
+  border-radius: 10px;
+  padding-top: 10px;
+}
+#inputGroupFileAddon01{
+  margin-top:0px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+#inputGroupFile01{
+  margin-top: 5px;
+  border-radius: 10px;
+  border-color:#424f4c;
+  background-color: #797c7b;
+}
+#player{
+  border-radius:10px;
+  background-color: white;
+}
+.hiddenResult{
+  display: none;
+}
