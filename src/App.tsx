@@ -5,6 +5,7 @@ import Home from "./components/Home.tsx"
 import Add from "./components/Add.tsx"
 import SearchResult from './components/SearchResult.tsx'
 import { useState } from "react"
+import "./App.css"
 
 function renderMain(index : number, songsData : any, artistData : string[]) {
   return <Main index={index} artists={artistData} songs={songsData}></Main>

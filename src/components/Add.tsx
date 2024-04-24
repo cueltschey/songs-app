@@ -14,8 +14,8 @@ const Add = ({addNewSong}: Props) => {
       const formdata = new FormData()
     
       formdata.append('file', target.files[i])
-      formdata.append('upload_preset', an unsigned upload preset)
-      formdata.append('api_key', your api key)
+      //formdata.append('upload_preset', an unsigned upload preset)
+      //formdata.append('api_key', your api key)
       formdata.append('resource_type','video')
 
       const results = await fetch('https://api.cloudinary.com/v1_1/<your cloudinary username>/video/upload', {
